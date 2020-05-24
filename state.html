@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>state wise data</title>
+</head>
+<body>
+    <div class="conteiner-sm" style="margin: 20px;">
+        <div class="alert alert-primary text-center">
+            <strong >Here you get data by spicific inputs</strong>
+            </div>
+            
+              <!-- <div class="form-group">
+                <label for="country">country name:</label>
+                <input type="texft" class="form-control" placeholder="Enter country name" id="country">
+              </div> -->
+              <div class="form-group">
+                <label for="state">State :</label>
+                <input type="text" class="form-control" placeholder="Enter State name" id="state" required>
+              </div>
+              <div class="form-group ">
+                <label for="district" class="form-group">District name : </label>
+               <input class="form-control" type="text" placeholder="Enter district name" id="district" required> 
+               
+              </div>
+            <button class="btn btn-dark" onclick="getStateWiseData()">search</button>
+
+            <table class="table table-bordered text-center" id="table">
+                <thead>
+                    <tr>
+                        <th class="bg-primary">state/District name</th>
+                        <th class="bg-info">Total cases</th>
+                        <th class="bg-danger">Total death</th>
+                        <th class="bg-success">Total Recovered</th>
+                    </tr>
+                </thead>
+
+            </table>
+           
+    </div>
+    <script >
+        
+
+
+        async function getStateWiseData(){
+    console.log('get state data running...');
+    const response = await fetch('https://api.covid19india.org/state_district_wise.json');
+    const data = await response.json();
+    console.log(data);
+    const state = document.querySelector('#state');
+    const stateName = state.value.toString();
+    const district = document.querySelector('#district');
+    const districtName = district.value.toString();
+    const stateData = data[stateName];
+    const districtWiseData = await stateData.districtData;
+   // const districtString =JSON.stringify(districtWiseData); 
+ //   console.log(districtString);
+    
+    console.log(districtWiseData[districtName]);
+    const finalData = districtWiseData[districtName];
+    const table = document.querySelector('#table');
+    
+       if(districtName){
+        var row = table.insertRow(0);
+        let cell1 = row.insertCell();
+        let text1 = document.createTextNode(districtName);
+        cell1.appendChild(text1);
+
+        let cell2 = row.insertCell();
+        let text2 = document.createTextNode(finalData.confirmed);
+        cell2.appendChild(text2);
+
+        let cell3 = row.insertCell();
+        let text3 = document.createTextNode(finalData.deceased);
+        cell3.appendChild(text3);
+
+        let cell4 = row.insertCell();
+        let text4 = document.createTextNode(finalData.recovered);
+        cell4.appendChild(text4);
+        table.appendChild(row);
+       }
+}
+
+    </script>
+</body>
+</html>

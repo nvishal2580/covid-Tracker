@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>statistics</title>
+</head>
+<body>
+    <div class="container-fluid bg-light">
+        <h1 class="text-center ">Corona Data in Tabular Form</h1>
+        <!-- <input type="text" id="myInput"  placeholder="Search for country names.." title="Type in a name"> -->
+        <div class="alert alert-info">
+          <strong>info!</strong> If you are not gatting data please refresh page.
+        </div>
+        <div class="alert alert-primary">
+          <strong>Attention!</strong> <a href="./state.html">If you want state wise data of a country Click Here!</a>.
+        </div>
+        <div class="form-group">
+            <label for="usr">Search by country name :</label>
+            <input type="text" onkeyup="myFunction()" class="form-control" placeholder="Search by country name" id="usr">
+          </div>
+        <table class="table table-bordered table-hover" id="table">
+           <thead class="text-center">
+               <tr>
+                   <th class="bg-secondary">Country</th>
+                   <th class="bg-dark text-white">code</th>
+                   <th class="bg-primary">Total cases</th>
+                   <th class="bg-danger">Total death</th>
+                   <th class="bg-success">Total Recovered</th>
+                   <th class="bg-info">Last Update on</th>
+               </tr>
+
+           </thead>
+           
+        </table>
+    </div>
+    <script src="./index.js">
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-traker</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js'></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Covid-<small>Traker</small></a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./statistics.html">Statistics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Help</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+   
+  
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1>what is Covod-19 ?</h1>
+              <ul>
+                <li>COVID-19 is the disease caused by the new coronavirus that emerged in China in December 2019.</li>
+                <li>COVID-19 symptoms include cough, fever, shortness of breath, muscle aches, sore throat, unexplained loss of taste or smell, diarrhea and headache. COVID-19 can be severe, and some cases have caused death.</li>
+                <li>The new coronavirus can be spread from person to person. It is diagnosed with a laboratory test.</li>
+                <li>There is no coronavirus vaccine yet. Prevention involves frequent hand-washing, coughing into the bend of your elbow, staying home when you are sick and wearing a cloth face covering if you can't practice social distancing.</li>
+                </ul>
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1>What are symptoms of COVID-19?</h1>
+              <p>COVID-19 symptoms include:</p>
+              <ul>
+                <li>Cough</li>
+                <li>Fever</li>
+                <li>Shortness of breath</li>
+                <li>Muscle aches</li>
+                <li>Sore throat</li>
+                <li>Unexplained loss of taste or smell</li>
+                <li>Diarrhea</li>
+                <li>Headache</li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <div class="jumbotron jumbotron-fluid text-center">
+            <h1 class="text-dark">Global Data</h1>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4 border border-primary">
+                <h2 class="text-primary">Total cases</h2>
+                <span class = "gdata" id="gd-1">124541</span>
+              </div>
+              <div class="col-sm-4 border border-danger">
+                <h2 class="text-danger">Total Deathes</h2>
+                <span class = "gdata" id="gd-2">124541</span>
+              </div>
+              <div class="col-sm-4 border border-success">
+                <h2 class="text-success">Total Recovered</h2>
+                <span class = "gdata" id="gd-3">124541</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" class="embed-responsive-item" src="./What Is Coronavirus (COVID-19).mp4" allowfullscreen></iframe>
+            </div>
+          </div>
+ 
+    <!-- <div class="container">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+    
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/free-to-use-sounds-1xT5Yz2Am0M-unsplash (1).jpg" class="img-fluid" width="1400px" height="500px" alt="Los Angeles">
+                <div class="carousel-caption">
+                  <h3>#STAY-HOME STAY-SAFE</h3>
+                  <p>Not for others for your Family</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/priscilla-du-preez-zY0q8eFom8I-unsplash.jpg" class="img-fluid" width="1400px" height="500px" alt="Chicago">
+                <div class="carousel-caption">
+                  <h3>#STAY-HOME STAY-SAFE</h3>
+                  <p>Not for others for your Family</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/united-nations-covid-19-response-m6OZNfmo2Dk-unsplash (1).jpg" class="img-fluid" width="1400px" height="500px" alt="New York">
+                <div class="carousel-caption">
+                  <h3>#STAY-HOME STAY-SAFE</h3>
+                  <p>Not for others for your Family</p>
+                </div>
+              </div>
+            </div>
+          
+            
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+    </div> -->
+
+
+    <div class="page-footer">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="./index.html"> COVID-tracker.com</a>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
