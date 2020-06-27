@@ -1,4 +1,4 @@
-console.log("hello");
+
 const url ="https://api.covid19api.com/summary";
 
 function counterup(data,id){
